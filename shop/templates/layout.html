@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/custom.css')}}"> {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>Shop</title>
+    {% endif %}
+</head>
+
+<body>
+    <div style="min-height:calc(100vh - 100px - 30px);">
+        {% block content %} {% endblock content %}
+    </div>
+    {% include 'footer.html' %}
+    <script src="{{url_for('static', filename='js/jquery-3.4.1.slim.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+</body>
+
+</html>
